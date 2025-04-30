@@ -2,10 +2,29 @@ pipeline {
     agent any
 
     stages {
+        agent none
         stage('Random') {
+            agent any
             steps {
                 echo 'Hello random person '
             }
+
+            //Adding comments.
+
+        stage {'Test'}
+        {
+            agent{
+                docker{
+                    image 'node:18-alpine'
+                }
+                steps{
+                    sh '''
+                    npm --version
+                    echo "Test complete."
+                    '''
+                }
+            }
+        }
         }
     }
 }
