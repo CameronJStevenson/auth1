@@ -2,15 +2,10 @@ pipeline {
     agent any
 
     stages {
-        agent none
-        stage('Random') {
-            agent {any}
+        stage('Hello') {
             steps {
-                echo 'Hello new person '
+                echo 'Hello World'
             }
-
-
-
         }
     }
 }
