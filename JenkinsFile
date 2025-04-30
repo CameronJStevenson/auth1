@@ -14,6 +14,8 @@ pipeline {
    
             steps {
                 echo 'Testing done'
+                echo 'test on adding'
+                echo 'Seeing if this works'
             }
 
             //Adding comments.
