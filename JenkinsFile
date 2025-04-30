@@ -4,12 +4,12 @@ pipeline {
     stages {
         agent none
         stage('Random') {
-            agent any
+            agent {any}
             steps {
                 echo 'Hello new person '
             }
 
-            //Adding comments.
+
 
         }
     }
