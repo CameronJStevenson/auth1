@@ -6,25 +6,11 @@ pipeline {
         stage('Random') {
             agent any
             steps {
-                echo 'Hello random person '
+                echo 'Hello new person '
             }
 
             //Adding comments.
 
-        stage {'Test'}
-        {
-            agent{
-                docker{
-                    image 'node:18-alpine'
-                }
-                steps{
-                    sh '''
-                    npm --version
-                    echo "Test complete."
-                    '''
-                }
-            }
-        }
         }
     }
 }
